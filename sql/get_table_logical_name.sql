@@ -1,0 +1,7 @@
+SELECT 
+    TABLE_COMMENT
+FROM 
+    INFORMATION_SCHEMA.TABLES
+WHERE 
+    TABLE_SCHEMA = '{database}' 
+AND TABLE_NAME = '{table_name}'

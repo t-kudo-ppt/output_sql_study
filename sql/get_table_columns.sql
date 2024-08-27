@@ -1,0 +1,11 @@
+SELECT
+    COLUMN_NAME AS `物理名`,
+    COLUMN_COMMENT AS `論理名`,
+    COLUMN_TYPE AS `型`,
+    IS_NULLABLE AS `NULL許容`,
+    COLUMN_KEY AS `主キー`
+FROM
+    INFORMATION_SCHEMA.COLUMNS
+WHERE
+    TABLE_SCHEMA = '{database}'
+AND TABLE_NAME = '{table_name}'
